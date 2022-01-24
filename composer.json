@@ -1,0 +1,60 @@
+{
+    "name": "datlechin/flarum-title-length",
+    "description": "Customize discussion title length.",
+    "keywords": [
+        "flarum",
+        "flarum-extension",
+        "title length"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat",
+            "email": "datlechin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/datlechin/flarum-title-length",
+        "forum": "https://discuss.flarum.org/d/29924"
+    },
+    "autoload": {
+        "psr-4": {
+            "Datlechin\\TitleLength\\": "src/"
+        }
+    },
+    "homepage": "https://ngoquocdat.com",
+    "extra": {
+        "flarum-extension": {
+            "title": "Title Length",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-ruler-horizontal",
+                "color": "#fff",
+                "backgroundColor": "#D3241C"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": false,
+                "js": true,
+                "jsCommon": false,
+                "css": false,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    }
+}

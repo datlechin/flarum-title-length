@@ -11,18 +11,17 @@
 
 namespace Datlechin\TitleLength;
 
-use Flarum\Discussion\DiscussionValidator;
+use Flarum\Api\Resource\DiscussionResource;
 use Flarum\Extend;
 
 return [
-
     (new Extend\Frontend('admin'))
         ->js(__DIR__ . '/js/dist/admin.js'),
 
     new Extend\Locales(__DIR__ . '/locale'),
 
-    (new Extend\Validator(DiscussionValidator::class))
-        ->configure(AddDiscussionValidation::class),
+    (new Extend\ApiResource(DiscussionResource::class))
+        ->field('title', OverrideTitleLength::class),
 
     (new Extend\Settings())
         ->default('datlechin-title-length.limit', true)
